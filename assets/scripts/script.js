@@ -21,3 +21,19 @@ function addTask() {
         taskInput.value = "";
     }
 }
+
+function displayMotivationalMessage() {
+    const messages = [
+        "Test message",
+
+    ];
+
+    const messageContainer = document.getElementById("motivational-message");
+    const randomIndex = Math.floor(Math.random() * messages.length);
+
+    const message = document.createElement("p");
+    message.innerText = messages[randomIndex];
+
+    messageContainer.innerHTML = "";
+    messageContainer.appendChild(message);
+}
