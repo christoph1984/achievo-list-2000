@@ -25,7 +25,27 @@ function addTask() {
 
 function displayMotivationalMessage() {
     const messages = [
-        "Test message",
+        "You're crushing it, one mundane task at a time!",
+        "Turning the ordinary into extraordinary!",
+        "Even superheroes have to do laundry, you know!",
+        "You're so productive, you're practically a task ninja!",
+        "High-fiving you through the monotony!",
+        "Slaying those everyday dragons!",
+        "You're a pro at adulting. Keep it up!",
+        "Making the ordinary tasks extraordinary!",
+        "Turning the mundane into a masterpiece!",
+        "Channeling your inner productivity wizard!",
+        "You're leveling up, one chore at a time!",
+        "Making the world a better place, one sock at a time.",
+        "Mastering the art of getting stuff done!",
+        "Conquering chores like a champ!",
+        "Transforming the mundane into epic victories!",
+        "You're the MVP of everyday tasks!",
+        "Cleaning and conquering – you've got this!",
+        "Kicking chores' butts, one checkbox at a time!",
+        "Crushing your to-do list like a boss!",
+        "Flawless victory!",
+        "Remember, even superheroes have to do the dishes!",
 
     ];
 
