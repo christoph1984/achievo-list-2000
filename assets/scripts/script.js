@@ -14,6 +14,7 @@ function addTask() {
         doneButton.innerText = "Done";
         doneButton.onclick = function () {
             taskList.removeChild(li);
+            displayMotivationalMessage();
         };
 
         li.appendChild(doneButton);
