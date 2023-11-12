@@ -1,18 +1,7 @@
-function displayGreetingMessage() {
-    const greetingContainer = document.getElementById("greeting-message");
-    const greeting = getGreeting();
-
-    const greetingElement = document.createElement("p");
-    greetingElement.innerText = greeting;
-
-    greetingContainer.innerHTML = "";
-    greetingContainer.appendChild(greetingElement);
-}
-
 function getGreeting() {
-    const currentTime = new Date();
-    const currentHour = currentTime.getHours();
-    let greetingMessage;
+    var currentTime = new Date();
+    var currentHour = currentTime.getHours();
+    var greetingMessage;
 
     if (currentHour >= 5 && currentHour < 12) {
         greetingMessage = "Good morning! What would you like to achieve today?";
@@ -25,42 +14,22 @@ function getGreeting() {
     return greetingMessage;
 }
 
-displayGreetingMessage();
+function displayGreetingMessage() {
+    var greetingContainer = document.getElementById("greeting-message");
+    var greeting = getGreeting();
 
-function addTask() {
+    var greetingElement = document.createElement("p");
+    greetingElement.innerText = greeting;
 
-    document.getElementById("task").focus();
-
-    const taskInput = document.getElementById("task");
-    const taskText = taskInput.value.trim();
-
-    if (taskText !== "") {
-        const taskList = document.getElementById("task-list");
-        const li = document.createElement("li");
-        li.innerText = taskText;
-
-        const doneButton = document.createElement("button");
-        doneButton.innerText = "Done";
-        doneButton.onclick = function () {
-            taskList.removeChild(li);
-            displayMotivationalMessage();
-        };
-
-        li.appendChild(doneButton);
-        taskList.appendChild(li);
-        taskInput.value = "";
-    }
+    greetingContainer.innerHTML = "";
+    greetingContainer.appendChild(greetingElement);
 }
 
-document.getElementById("task").addEventListener("keypress", function (event) {
-    // Check if the pressed key is Enter (key code 13)
-    if (event.key === "Enter") {
-        addTask(); // Call your function here
-    }
-});
+
+displayGreetingMessage();
 
 function displayMotivationalMessage() {
-    const messages = [
+    var messages = [
         "You're crushing it, one mundane task at a time!",
         "Turning the ordinary into extraordinary!",
         "Even superheroes have to do laundry, you know!",
@@ -85,12 +54,45 @@ function displayMotivationalMessage() {
 
     ];
 
-    const messageContainer = document.getElementById("motivational-message");
-    const randomIndex = Math.floor(Math.random() * messages.length);
+    var messageContainer = document.getElementById("motivational-message");
+    var randomIndex = Math.floor(Math.random() * messages.length);
 
-    const message = document.createElement("p");
+    var message = document.createElement("p");
     message.innerText = messages[randomIndex];
 
     messageContainer.innerHTML = "";
     messageContainer.appendChild(message);
 }
+
+function addTask() {
+
+    document.getElementById("task").focus();
+
+    var taskInput = document.getElementById("task");
+    var taskText = taskInput.value.trim();
+
+    if (taskText !== "") {
+        var taskList = document.getElementById("task-list");
+        var li = document.createElement("li");
+        li.innerText = taskText;
+
+        var doneButton = document.createElement("button");
+        doneButton.innerText = "Done";
+        doneButton.onclick = function () {
+            taskList.removeChild(li);
+            displayMotivationalMessage();
+        };
+
+        li.appendChild(doneButton);
+        taskList.appendChild(li);
+        taskInput.value = "";
+    }
+}
+
+document.getElementById("task").addEventListener("keypress", function (event) {
+    // Check if the pressed key is Enter (key code 13)
+    if (event.key === "Enter") {
+        addTask(); // Call your function here
+    }
+});
+
