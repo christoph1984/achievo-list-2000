@@ -1,3 +1,32 @@
+function displayGreetingMessage() {
+    const greetingContainer = document.getElementById("greeting-message");
+    const greeting = getGreeting();
+
+    const greetingElement = document.createElement("p");
+    greetingElement.innerText = greeting;
+
+    greetingContainer.innerHTML = "";
+    greetingContainer.appendChild(greetingElement);
+}
+
+function getGreeting() {
+    const currentTime = new Date();
+    const currentHour = currentTime.getHours();
+    let greetingMessage;
+
+    if (currentHour >= 5 && currentHour < 12) {
+        greetingMessage = "Good morning! What would you like to achieve today?";
+    } else if (currentHour >= 12 && currentHour < 18) {
+        greetingMessage = "Good afternoon! What would you like to achieve today?";
+    } else {
+        greetingMessage = "Good evening! What would you like to achieve today?";
+    }
+
+    return greetingMessage;
+}
+
+displayGreetingMessage();
+
 function addTask() {
 
     document.getElementById("task").focus();
