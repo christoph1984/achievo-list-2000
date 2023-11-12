@@ -52,6 +52,13 @@ function addTask() {
     }
 }
 
+document.getElementById("task").addEventListener("keypress", function (event) {
+    // Check if the pressed key is Enter (key code 13)
+    if (event.key === "Enter") {
+        addTask(); // Call your function here
+    }
+});
+
 function displayMotivationalMessage() {
     const messages = [
         "You're crushing it, one mundane task at a time!",
