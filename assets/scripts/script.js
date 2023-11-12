@@ -77,7 +77,7 @@ function displayMotivationalMessage() {
         "Conquering chores like a champ!",
         "Transforming the mundane into epic victories!",
         "You're the MVP of everyday tasks!",
-        "Cleaning and conquering – you've got this!",
+        "Cleaning and conquering, you've got this!",
         "Kicking chores' butts, one checkbox at a time!",
         "Crushing your to-do list like a boss!",
         "Flawless victory!",
