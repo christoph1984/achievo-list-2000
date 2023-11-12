@@ -21,6 +21,52 @@ h3 {
     text-align: center;
 }
 
+input[type="text"] {
+    padding: 10px;
+    margin-right: 5px;
+    border: 1px solid #3498db;
+    width: 60%;
+    /* Adjust as needed */
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #fff;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#motivational-message {
+    margin-top: 20px;
+    padding: 15px;
+    /* background-color: #3498db; */
+    color: #333;
+    text-align: center;
+    border-radius: 5px;
+}
+
+#motivational-message p {
+    margin: 0;
+}
+
 /* Media Queries */
 @media only screen and (max-width: 600px) {
     input[type="text"] {
