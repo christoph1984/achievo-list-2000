@@ -16,6 +16,14 @@ h3 {
     color: #3498db;
 }
 
+#Title {
+    text-align: center;
+}
+
+#padding {
+    height: 50%;
+}
+
 .todo-container {
     margin-top: 20px;
     text-align: center;
@@ -26,7 +34,7 @@ input[type="text"] {
     margin-right: 5px;
     border: 1px solid #3498db;
     width: 60%;
-    /* Adjust as needed */
+    
 }
 
 button {
@@ -58,14 +66,25 @@ li {
     margin-top: 20px;
     padding: 15px;
     /* background-color: #3498db; */
-    color: #333;
+    color: rgb(175, 0, 0);
     text-align: center;
     border-radius: 5px;
+    font-weight: bold;
 }
 
 #motivational-message p {
     margin: 0;
 }
+
+footer {    
+    background-color: #3498db;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+}
+
+
 
 /* Media Queries */
 @media only screen and (max-width: 600px) {
