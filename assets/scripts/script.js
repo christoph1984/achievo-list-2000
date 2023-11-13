@@ -108,6 +108,13 @@ function addTask() {
     var taskInput = document.getElementById("task");
     var taskText = taskInput.value.trim();
 
+    if (!taskText) {
+        // Alert or notify the user that the input is empty
+        alert("Please enter a task.");
+        taskInput.focus();
+        return; // Exit the function without adding the task
+    }
+
     if (taskText !== "") {
         var taskList = document.getElementById("task-list");
         var li = document.createElement("li");
