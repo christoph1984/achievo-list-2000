@@ -71,6 +71,7 @@ button {
     color: #fff;
     border: none;
     cursor: pointer;
+    margin-left: 15px;
 }
 
 button:hover {
