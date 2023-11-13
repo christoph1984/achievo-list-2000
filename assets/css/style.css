@@ -1,6 +1,9 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f2f5fa;
+    /* background-color: #f2f5fa; */
+    background-image: url("assets/images/set_of_check_marks_multiple_colours.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
     color: #333;
     margin: 0;
     padding: 0;
@@ -28,6 +31,7 @@ h3 {
         flex-direction: column;
         justify-content: space-between;
         width: 50%;
+        background-color: #f2f5fa;
 }
 
 #Title {
