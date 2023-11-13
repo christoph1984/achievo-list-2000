@@ -1,3 +1,40 @@
+// Call loadTasks() when the page loads to display saved tasks
+document.addEventListener("DOMContentLoaded", loadTasks);
+
+function saveTasks() {
+    var taskList = document.getElementById("task-list");
+    var tasks = [];
+
+    for (var i = 0; i < taskList.children.length; i++) {
+        tasks.push(taskList.children[i].innerText.replace("Done", "").trim());
+    }
+
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+}
+
+function loadTasks() {
+    var tasks = JSON.parse(localStorage.getItem("tasks"));
+
+    if (tasks) {
+        tasks.forEach(function (taskText) {
+            var taskList = document.getElementById("task-list");
+            var li = document.createElement("li");
+            li.innerText = taskText;
+
+            var doneButton = document.createElement("button");
+            doneButton.innerText = "Done";
+            doneButton.onclick = function () {
+                taskList.removeChild(li);
+                displayMotivationalMessage();
+                saveTasks(); // Save tasks after removing a task
+            };
+
+            li.appendChild(doneButton);
+            taskList.appendChild(li);
+        });
+    }
+}
+
 function getGreeting() {
     var currentTime = new Date();
     var currentHour = currentTime.getHours();
@@ -86,13 +123,16 @@ function addTask() {
         li.appendChild(doneButton);
         taskList.appendChild(li);
         taskInput.value = "";
+
+        saveTasks(); // Save tasks after adding a new task
     }
+    
 }
 
 document.getElementById("task").addEventListener("keypress", function (event) {
     // Check if the pressed key is Enter (key code 13)
     if (event.key === "Enter") {
-        addTask(); // Call your function here
+        addTask(); 
     }
 });
 
