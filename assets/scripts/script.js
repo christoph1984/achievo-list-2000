@@ -133,7 +133,7 @@ function addTask() {
 
         saveTasks(); // Save tasks after adding a new task
     }
-    
+
 }
 
 document.getElementById('myButton').addEventListener('click', function () {
@@ -143,7 +143,7 @@ document.getElementById('myButton').addEventListener('click', function () {
 document.getElementById("task").addEventListener("keypress", function (event) {
     // Check if the pressed key is Enter (key code 13)
     if (event.key === "Enter") {
-        addTask(); 
+        addTask();
     }
 });
 

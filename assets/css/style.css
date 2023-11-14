@@ -27,12 +27,12 @@ h3 {
     margin-bottom: 20px;
     margin-top: 20px;
     height: fit-content;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 50%;
-        background-color: #f2f5fa;
-        text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+    background-color: #f2f5fa;
+    text-align: center;
 }
 
 #Title {
@@ -50,9 +50,9 @@ h3 {
 
 #intro-text {
     display: block;
-        text-align: center;
-        justify-content: center;
-        font-size: large;
+    text-align: center;
+    justify-content: center;
+    font-size: large;
 }
 
 .todo-container {
@@ -71,7 +71,7 @@ input[type="text"] {
     width: 60%;
     text-align: center;
     justify-content: center;
-    
+
 }
 
 button {
@@ -119,7 +119,7 @@ li {
     margin: 0;
 }
 
-footer {    
+footer {
     background-color: #3498db;
     width: 100%;
     text-align: center;
@@ -127,50 +127,61 @@ footer {
     font-weight: bold;
     margin-top: 100px;
 }
+
 #footer-list {
-        background-color: #3498db;
-        text-align: center;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-        display: flex;
-        justify-content: space-evenly;
-        list-style-type: none;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        position: relative;
+    background-color: #3498db;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    position: relative;
 }
 
 .footer-items {
     background-color: #3498db;
     color: #fff;
     font-weight: bold;
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+    color: #fff;
 }
 
 /* Media Queries */
 @media only screen and (max-width: 1143px) {
+
     /* input[type="text"] {
         width: 100%; */
-        /* Full width on mobile */
-        input, button {
-                width: 100%;
-                margin: 0 0 10px;
-                /* add space between the elements */
-        }    li {
-            display: flex;
-                justify-content: center;
-                /* Centers horizontally */
-                align-items: center;
-                /* Centers vertically */
-                flex-direction: column;
-        }
+    /* Full width on mobile */
+    input,
+    button {
+        width: 100%;
+        margin: 0 0 10px;
+        /* add space between the elements */
     }
+
+    li {
+        display: flex;
+        justify-content: center;
+        /* Centers horizontally */
+        align-items: center;
+        /* Centers vertically */
+        flex-direction: column;
+    }
+}
 
 
 @media only screen and (min-width: 601px) {
     .todo-container {
         max-width: 600px;
         /* Limit width on larger screens */
-        
+
     }
 }
