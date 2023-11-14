@@ -148,9 +148,14 @@ footer {
 
 /* Media Queries */
 @media only screen and (max-width: 600px) {
-    input[type="text"] {
-        width: 100%;
+    /* input[type="text"] {
+        width: 100%; */
         /* Full width on mobile */
+        input,
+            button {
+                width: 100%;
+                margin: 0 0 10px;
+                /* add space between the elements */
     }
 }
 
@@ -158,5 +163,6 @@ footer {
     .todo-container {
         max-width: 600px;
         /* Limit width on larger screens */
+        
     }
 }
