@@ -100,7 +100,7 @@ li {
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 #motivational-message {
@@ -147,17 +147,24 @@ footer {
 }
 
 /* Media Queries */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1143px) {
     /* input[type="text"] {
         width: 100%; */
         /* Full width on mobile */
-        input,
-            button {
+        input, button {
                 width: 100%;
                 margin: 0 0 10px;
                 /* add space between the elements */
+        }    li {
+            display: flex;
+                justify-content: center;
+                /* Centers horizontally */
+                align-items: center;
+                /* Centers vertically */
+                flex-direction: column;
+        }
     }
-}
+
 
 @media only screen and (min-width: 601px) {
     .todo-container {
