@@ -136,6 +136,10 @@ function addTask() {
     
 }
 
+document.getElementById('myButton').addEventListener('click', function () {
+    document.getElementById('displayText').innerText = 'Enter your task below to add it to the list, and once completed, the Achievo - List 2000 will let you know how great you are!';
+});
+
 document.getElementById("task").addEventListener("keypress", function (event) {
     // Check if the pressed key is Enter (key code 13)
     if (event.key === "Enter") {
