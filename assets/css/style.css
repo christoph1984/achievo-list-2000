@@ -118,14 +118,14 @@ li {
     margin: 0;
 }
 
-/* footer {    
+footer {    
     background-color: #3498db;
     width: 100%;
     text-align: center;
     color: #fff;
     font-weight: bold;
     margin-top: auto;
-} */
+}
 #footer-list {
         background-color: #3498db;
         text-align: center;
@@ -137,12 +137,13 @@ li {
         bottom: 0;
         left: 0;
         width: 100%;
-        position: absolute;
+        position: relative;
 }
 
 .footer-items {
     background-color: #3498db;
     color: #fff;
+    font-weight: bold;
 }
 
 /* Media Queries */
