@@ -1,39 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="The Achievo-List 2000">
-    <meta name="keywords" content="to-do, task, productivity, chores, motivation, achieve">
-    <meta name="author" content="Christoph1984">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="The Achievo-List 2000" />
+    <meta
+      name="keywords"
+      content="to-do, task, productivity, chores, motivation, achieve"
+    />
+    <meta name="author" content="Christoph1984" />
     <title>The Achievo-List 2000</title>
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
-</head>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
+  </head>
 
-<body>
-    <div id="app-container">
-    <p id="greeting-message"></p>
-
+  <body>
     <h1 id="Title">The Achievo-List 2000</h1>
     <h3>Helping you achieve those little wins, every day</h3>
-    <div class="todo-container">
-        <input type="text" id="task" placeholder="Put jobs here">
+
+    <div id="app-container">
+      <p id="greeting-message"></p>
+      <p id="intro-text">
+        Welcome to the Achievo-List 2000, your handy assistant for tracking
+        those tasks and delivering the little motivation boost that we all need
+        sometimes. Enter your task below to add it to the list, and once
+        completed, the Achievo-List 2000 will let you know how great you are!
+      </p>
+
+      <div class="todo-container">
+        <input type="text" id="task" placeholder="Put jobs here" />
         <button onclick="addTask()">Add</button>
         <ul id="task-list"></ul>
+      </div>
+
+      <div id="motivational-message"></div>
+
+      <div id="padding"></div>
     </div>
 
-    <div id="motivational-message"></div>
-
-    <div id="padding"></div>
-  
-    </div>
-        
-        <footer>
-            <p>Get it done!</p>
-        </footer>
+    <footer>
+      <p>Get it done!</p>
+    </footer>
     <script src="assets/scripts/script.js"></script>
-        
-    </body>
+  </body>
 </html>
