@@ -137,7 +137,17 @@ function addTask() {
 }
 
 document.getElementById('myButton').addEventListener('click', function () {
-    document.getElementById('displayText').innerText = 'Enter your task below to add it to the list, and once completed, the Achievo - List 2000 will let you know how great you are!';
+    var displayTextElement = document.getElementById('displayText');
+
+    // Check if the displayText element is currently visible
+    if (displayTextElement.style.display === 'none' || displayTextElement.style.display === '') {
+        // If hidden, show it and set the text
+        displayTextElement.style.display = 'block';
+        displayTextElement.innerText = 'Enter your task below to add it to the list, and once completed, the Achievo - List 2000 will let you know how great you are!';
+    } else {
+        // If visible, hide it
+        displayTextElement.style.display = 'none';
+    }
 });
 
 document.getElementById("task").addEventListener("keypress", function (event) {
