@@ -140,15 +140,32 @@ document.getElementById('myButton').addEventListener('click', function () {
     var displayTextElement = document.getElementById('displayText');
 
     // Check if the displayText element is currently visible
-    if (displayTextElement.style.display === 'none' || displayTextElement.style.display === '') {
-        // If hidden, show it and set the text
-        displayTextElement.style.display = 'block';
+    if (displayTextElement.style.visibility === 'hidden' || displayTextElement.style.visibility === '') {
+        // If hidden, make it visible and set the text
+        displayTextElement.style.visibility = 'visible';
+        displayTextElement.style.opacity = '1';
         displayTextElement.innerText = 'Enter your task below to add it to the list, and once completed, the Achievo - List 2000 will let you know how great you are!';
     } else {
-        // If visible, hide it
-        displayTextElement.style.display = 'none';
+        // If visible, hide it by setting visibility to hidden and opacity to 0
+        displayTextElement.style.visibility = 'hidden';
+        displayTextElement.style.opacity = '0';
     }
 });
+
+
+// document.getElementById('myButton').addEventListener('click', function () {
+//     var displayTextElement = document.getElementById('displayText');
+
+//     // Check if the displayText element is currently visible
+//     if (displayTextElement.style.display === 'none' || displayTextElement.style.display === '') {
+//         // If hidden, show it and set the text
+//         displayTextElement.style.display = 'block';
+//         displayTextElement.innerText = 'Enter your task below to add it to the list, and once completed, the Achievo - List 2000 will let you know how great you are!';
+//     } else {
+//         // If visible, hide it
+//         displayTextElement.style.display = 'none';
+//     }
+// });
 
 document.getElementById("task").addEventListener("keypress", function (event) {
     // Check if the pressed key is Enter (key code 13)
