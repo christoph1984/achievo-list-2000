@@ -17,16 +17,13 @@ function loadTasks() {
 
     if (tasks) {
         tasks.forEach(function (taskText) {
-            var taskList = document.getElementById("task-list");
-            var li = document.createElement("li");
-            li.innerText = taskText;
+            // ... existing task creation code ...
 
-            var doneButton = document.createElement("button");
-            doneButton.innerText = "Done";
             doneButton.onclick = function () {
                 taskList.removeChild(li);
                 displayMotivationalMessage();
                 saveTasks(); // Save tasks after removing a task
+                checkTasks(); // Check if all tasks are done
             };
 
             li.appendChild(doneButton);
@@ -125,6 +122,7 @@ function addTask() {
         doneButton.onclick = function () {
             taskList.removeChild(li);
             displayMotivationalMessage();
+            checkTasks(); // Check if all tasks are done
         };
 
         li.appendChild(doneButton);
@@ -134,6 +132,15 @@ function addTask() {
         saveTasks(); // Save tasks after adding a new task
     }
 
+}
+
+function checkTasks() {
+    var taskList = document.getElementById("task-list");
+    if (taskList.children.length === 0) {
+        // If the task list is empty, display "All done"
+        var messageContainer = document.getElementById("motivational-message");
+        messageContainer.innerHTML = "<p>All done!</p>";
+    }
 }
 
 document.getElementById('myButton').addEventListener('click', function () {
