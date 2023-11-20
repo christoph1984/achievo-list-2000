@@ -1,9 +1,6 @@
 body {
+    /* Default font, full-page background image, flex layout, and central alignment */
     font-family: 'Arial', sans-serif;
-    /* background-color: #f2f5fa; */
-    background-image: url("assets/images/set_of_check_marks_multiple_colours.jpeg");
-    background-size: cover;
-    background-repeat: no-repeat;
     color: #333;
     margin: 0;
     padding: 0;
@@ -16,11 +13,13 @@ body {
 
 h1,
 h3 {
+    /* Blue color and center alignment for h1 and h3 elements */
     color: #3498db;
     text-align: center;
 }
 
 #app-container {
+    /* Styling for the app container with borders, padding, and centered flex layout */
     border: 2px solid #3498db;
     border-radius: 10px;
     padding: 10px;
@@ -36,19 +35,23 @@ h3 {
 }
 
 #Title {
+    /* Center alignment for the Title element */
     text-align: center;
 }
 
 #greeting-message {
+    /* Center alignment for greeting message text */
     text-align: center;
 }
 
 #padding {
+    /* Auto height with bottom padding */
     height: auto;
     padding-bottom: 150px;
 }
 
 #intro-text {
+    /* Block display, center alignment, and large font for intro text */
     display: block;
     text-align: center;
     justify-content: center;
@@ -56,6 +59,7 @@ h3 {
 }
 
 .todo-container {
+    /* Centered block layout for to-do container with margin and width adjustments */
     display: block;
     text-align: center;
     justify-content: center;
@@ -65,6 +69,7 @@ h3 {
 }
 
 input[type="text"] {
+    /* Styling for text inputs with padding, margin, border, and centered text */
     padding: 10px;
     margin-right: 5px;
     border: 1px solid #3498db;
@@ -75,6 +80,7 @@ input[type="text"] {
 }
 
 button {
+    /* Styling for buttons with padding, color, and hover effect */
     padding: 10px 20px;
     background-color: #3498db;
     color: #fff;
@@ -84,10 +90,12 @@ button {
 }
 
 button:hover {
+    /* Hover effect for buttons with darker background color */
     background-color: #2980b9;
 }
 
 ul {
+    /* Unstyled list with centered text and justified content */
     list-style-type: none;
     padding: 0;
     text-align: center;
@@ -95,6 +103,7 @@ ul {
 }
 
 li {
+    /* Styling for list items with background, padding, margin, and box shadow */
     background-color: #fff;
     padding: 10px;
     margin: 5px 0;
@@ -105,9 +114,9 @@ li {
 }
 
 #motivational-message {
+    /* Styling for motivational message with bold and large text, and padding */
     margin-top: 20px;
     padding: 15px;
-    /* background-color: #3498db; */
     color: rgb(175, 0, 0);
     text-align: center;
     border-radius: 5px;
@@ -116,10 +125,12 @@ li {
 }
 
 #motivational-message p {
+    /* Removes margin from paragraphs in the motivational message section */
     margin: 0;
 }
 
 footer {
+    /* Styling for footer with background color, text alignment, and sticky positioning */
     background-color: #3498db;
     width: 100%;
     text-align: center;
@@ -127,10 +138,11 @@ footer {
     font-weight: bold;
     margin-top: 100px;
     position: sticky;
-        top: 100%;
+    top: 100%;
 }
 
 #footer-list {
+    /* Footer list styling with flex layout, space distribution, and background color */
     background-color: #3498db;
     text-align: center;
     padding-top: 1rem;
@@ -145,6 +157,7 @@ footer {
 }
 
 .footer-items {
+    /* Styling for footer items with bold white text and no text decoration */
     background-color: #3498db;
     color: #fff;
     font-weight: bold;
@@ -152,6 +165,7 @@ footer {
 }
 
 a:visited {
+    /* Style for visited links with no text decoration and white color */
     text-decoration: none;
     color: #fff;
 }
@@ -159,22 +173,16 @@ a:visited {
 /* Media Queries */
 @media only screen and (max-width: 1143px) {
 
-    /* input[type="text"] {
-        width: 100%; */
-    /* Full width on mobile */
     input,
     button {
         width: 100%;
         margin: 0 0 10px;
-        /* add space between the elements */
     }
 
     li {
         display: flex;
         justify-content: center;
-        /* Centers horizontally */
         align-items: center;
-        /* Centers vertically */
         flex-direction: column;
     }
 }
@@ -183,7 +191,5 @@ a:visited {
 @media only screen and (min-width: 601px) {
     .todo-container {
         max-width: 600px;
-        /* Limit width on larger screens */
-
     }
 }
