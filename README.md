@@ -31,6 +31,12 @@ Visit [The Achievo-List 2000](https://christoph1984.github.io/achievo-list-2000/
 - **Engagement:** Interactive elements like buttons and motivational messages create a more engaging experience.
 - **Accessibility:** Designed with accessibility in mind, ensuring it's usable by everyone.
 
+## Design 
+
+### Wireframes from Lucid
+
+![Lucid Wireframe Large Screen](assets/images/list_lucid_screenshot.png)
+
 ## Version Control
 <ul>
 <li>The website was developed through Codeanywhere IDE.</li>
@@ -41,6 +47,37 @@ Visit [The Achievo-List 2000](https://christoph1984.github.io/achievo-list-2000/
   <li>git push - final command used to push committed code to remote repo on Github</li>
   </ul> 
 </ul>
+
+## Testing
+
+* Browser Compatibility
+
+| Browser | Test | Result  |
+--- | --- | ---
+Google Chrome | No issues.| Pass
+Safari | No issues. | Pass
+Mozilla Firefox | No issues.| Pass
+Microsoft Edge | No issues. | Pass
+
+* Device Compatibility
+
+| Device | Test | Result  |
+--- | --- | ---
+Google Pixel 6 Pro | No issues.| Pass
+iPhone SE| No issues. | Pass
+iPhone 13 | No issues.| Pass
+
+* Greeting message time of day testing
+
+| Time of Day | Result  |
+--- | --- 
+Morning | Pass 
+Afternoon | Pass
+Evening | Pass
+
+* Lighthouse testing (site tested in Lighthouse repeatedly throughout development)
+
+![Lucid Wireframe Mobile Screen](assets/images/list_lighthouse.png)
 
 ### Cloning the Repository
 <ul>
@@ -98,7 +135,6 @@ Visit [The Achievo-List 2000](https://christoph1984.github.io/achievo-list-2000/
 * Code Institute's Codeanywhere Template to generate the workspace for the project.
 
 ## Credits
-* pexels.com - used to source all the images included in the website.
 * Google Fonts - for fonts to use in website.
 * FontAwesome for all the icons used in the website.
 * W3Schools.com - used throughout the website for general help.
