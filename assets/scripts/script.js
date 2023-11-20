@@ -1,29 +1,33 @@
-// Call loadTasks() when the page loads to display saved tasks
+// Add event listener to load tasks from local storage when the page is fully loaded
 document.addEventListener("DOMContentLoaded", loadTasks);
 
+// Function to save tasks to local storage
 function saveTasks() {
     var taskList = document.getElementById("task-list");
     var tasks = [];
 
+    // Loop through task list items and store their text content
     for (var i = 0; i < taskList.children.length; i++) {
         tasks.push(taskList.children[i].innerText.replace("Done", "").trim());
     }
-
+    // Save the tasks array as a JSON string in local storage
     localStorage.setItem("tasks", JSON.stringify(tasks));
 }
 
+// Function to load tasks from local storage
 function loadTasks() {
     var tasks = JSON.parse(localStorage.getItem("tasks"));
 
+    // Create list items for each saved task and append to the task list
     if (tasks) {
         tasks.forEach(function (taskText) {
-            // ... existing task creation code ...
 
+            // Create a 'Done' button for each task
             doneButton.onclick = function () {
-                taskList.removeChild(li);
-                displayMotivationalMessage();
-                saveTasks(); // Save tasks after removing a task
-                checkTasks(); // Check if all tasks are done
+                taskList.removeChild(li); // Remove task from list
+                displayMotivationalMessage(); // Display a motivational message
+                saveTasks(); // Update tasks in local storage
+                checkTasks(); // Check if all tasks are completed
             };
 
             li.appendChild(doneButton);
@@ -32,11 +36,13 @@ function loadTasks() {
     }
 }
 
+// Function to generate a greeting message based on the current time
 function getGreeting() {
     var currentTime = new Date();
     var currentHour = currentTime.getHours();
     var greetingMessage;
 
+    // Determine the greeting message based on the time of day
     if (currentHour >= 5 && currentHour < 12) {
         greetingMessage = "Good morning! What would you like to achieve today?";
     } else if (currentHour >= 12 && currentHour < 18) {
@@ -47,7 +53,7 @@ function getGreeting() {
 
     return greetingMessage;
 }
-
+// Function to display the greeting message in a designated container
 function displayGreetingMessage() {
     var greetingContainer = document.getElementById("greeting-message");
     var greeting = getGreeting();
@@ -59,9 +65,10 @@ function displayGreetingMessage() {
     greetingContainer.appendChild(greetingElement);
 }
 
-
+// Display the greeting message as soon as the script loads
 displayGreetingMessage();
 
+// Function to display a random motivational message
 function displayMotivationalMessage() {
     var messages = [
         "You're crushing it, one mundane task at a time!",
@@ -97,7 +104,7 @@ function displayMotivationalMessage() {
     messageContainer.innerHTML = "";
     messageContainer.appendChild(message);
 }
-
+// Function to add a new task
 function addTask() {
 
     document.getElementById("task").focus();
@@ -105,11 +112,11 @@ function addTask() {
     var taskInput = document.getElementById("task");
     var taskText = taskInput.value.trim();
 
+    // Alert and return if the task input is empty
     if (!taskText) {
-        // Alert or notify the user that the input is empty
         alert("Please enter a task.");
         taskInput.focus();
-        return; // Exit the function without adding the task
+        return;
     }
 
     if (taskText !== "") {
@@ -117,32 +124,33 @@ function addTask() {
         var li = document.createElement("li");
         li.innerText = taskText;
 
+        // Create a 'Done' button for the new task
         var doneButton = document.createElement("button");
         doneButton.innerText = "Done";
         doneButton.onclick = function () {
             taskList.removeChild(li);
-            displayMotivationalMessage();
-            checkTasks(); // Check if all tasks are done
+            displayMotivationalMessage(); // Display a motivational message
+            checkTasks(); // Check if all tasks are completed
         };
 
         li.appendChild(doneButton);
         taskList.appendChild(li);
         taskInput.value = "";
 
-        saveTasks(); // Save tasks after adding a new task
+        saveTasks(); // Save the new list of tasks
     }
 
 }
-
+// Function to check if all tasks are completed
 function checkTasks() {
     var taskList = document.getElementById("task-list");
     if (taskList.children.length === 0) {
-        // If the task list is empty, display final message
+        // Display a final message if all tasks are completed
         var messageContainer = document.getElementById("motivational-message");
         messageContainer.innerHTML = "<p>Task list? Completed it mate.</p>";
     }
 }
-
+// Event listener for the "Tell me how" button to toggle display text visibility
 document.getElementById('myButton').addEventListener('click', function () {
     var displayTextElement = document.getElementById('displayText');
 
@@ -159,23 +167,8 @@ document.getElementById('myButton').addEventListener('click', function () {
     }
 });
 
-
-// document.getElementById('myButton').addEventListener('click', function () {
-//     var displayTextElement = document.getElementById('displayText');
-
-//     // Check if the displayText element is currently visible
-//     if (displayTextElement.style.display === 'none' || displayTextElement.style.display === '') {
-//         // If hidden, show it and set the text
-//         displayTextElement.style.display = 'block';
-//         displayTextElement.innerText = 'Enter your task below to add it to the list, and once completed, the Achievo - List 2000 will let you know how great you are!';
-//     } else {
-//         // If visible, hide it
-//         displayTextElement.style.display = 'none';
-//     }
-// });
-
+// Event listener to add a task when the Enter key is pressed in the task input
 document.getElementById("task").addEventListener("keypress", function (event) {
-    // Check if the pressed key is Enter (key code 13)
     if (event.key === "Enter") {
         addTask();
     }
