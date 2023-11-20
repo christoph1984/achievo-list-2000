@@ -137,9 +137,9 @@ function addTask() {
 function checkTasks() {
     var taskList = document.getElementById("task-list");
     if (taskList.children.length === 0) {
-        // If the task list is empty, display "All done"
+        // If the task list is empty, display final message
         var messageContainer = document.getElementById("motivational-message");
-        messageContainer.innerHTML = "<p>All done!</p>";
+        messageContainer.innerHTML = "<p>Task list? Completed it mate.</p>";
     }
 }
 
