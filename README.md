@@ -4,6 +4,32 @@ Welcome to "The Achievo-List 2000" - a dynamic to-do list application designed t
 
 ![Achievo-List responsive image](assets/images/list_am_i_responsive.png)
 
+## Table of Contents
+1. [Welcome](#the-achievo-list-2000)
+2. [Key Features](#key-features)
+3. [Getting Started](#getting-started)
+   - [Adding a Task](#adding-a-task)
+   - [Viewing and Managing Tasks](#viewing-and-managing-tasks)
+4. [User Experience Highlights](#user-experience-highlights)
+5. [Design](#design)
+   - [Wireframes from Lucid](#wireframes-from-lucid)
+6. [Version Control](#version-control)
+7. [Testing](#testing)
+   - [Browser Compatibility](#browser-compatibility)
+   - [Device Compatibility](#device-compatibility)
+   - [Greeting Message Time of Day Testing](#greeting-message-time-of-day-testing)
+   - [W3C HTML Validation](#w3c-html-validation)
+   - [W3C CSS Validation](#w3c-css-validation)
+   - [JShint Javascript Validation](#jshint-javascript-validation)
+   - [Lighthouse Testing](#lighthouse-testing)
+8. [Cloning the Repository](#cloning-the-repository)
+9. [Forking](#forking)
+10. [Deployment](#deployment)
+11. [Technologies](#technologies)
+12. [Credits](#credits)
+13. [Contact](#contact)
+
+
 ## Key Features
 
 - **Task Management:** Add, view, and manage your tasks with ease. The intuitive input field and "Add" button make entering tasks effortless.
@@ -155,6 +181,8 @@ Evening | Pass
 * Lucid - for wireframe design
 * The favicon.ico image for the website.
 * freeCodeCamp.org for general guidance and examples
+* daily-dev-tips.com for initial guidance on the time-based greeting in vanilla JS
+* blog.logrocket.com for help with the Local Storage function
 
 ## Contact
 
