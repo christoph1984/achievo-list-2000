@@ -31,27 +31,27 @@
       sometimes.
     </h3>
 
-    <div id="app-container">
+    <div id="app-container" aria-label="Main application area">
       <!-- Container for the main application -->
-      <p id="greeting-message"></p>
+      <p id="greeting-message" aria-label="Greeting message"></p>
       <!-- Paragraph for displaying a greeting message -->
 
-      <button id="myButton">Tell me how!</button>
+      <button id="myButton" aria-label="Display instructions">Tell me how!</button>
       <!-- Button for user interaction -->
       <p id="displayText"></p>
       <!-- Paragraph for displaying text when the button is clicked -->
 
       <div class="todo-container">
         <!-- Container for the to-do list -->
-        <input type="text" id="task" placeholder="Put jobs here">
+        <input type="text" id="task" placeholder="Put jobs here" aria-label="Enter your task here">
         <!-- Input field for entering tasks -->
-        <button onclick="addTask()">Add</button>
+        <button onclick="addTask()" aria-label="Add new task">Add</button>
         <!-- Button to add the task to the list -->
-        <ul id="task-list"></ul>
+        <ul id="task-list" aria-label="List of tasks"></ul>
         <!-- Unordered list for displaying tasks -->
       </div>
 
-      <div id="motivational-message"></div>
+      <div id="motivational-message" aria-label="Motivational message section"></div>
       <!-- Container for displaying a motivational message -->
 
       <div id="padding"></div>
