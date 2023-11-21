@@ -13,6 +13,7 @@ Welcome to "The Achievo-List 2000" - a dynamic to-do list application designed t
 4. [User Experience Highlights](#user-experience-highlights)
 5. [Design](#design)
    - [Wireframes from Lucid](#wireframes-from-lucid)
+   - [Function Overview](#The-Achievo-List-2000-Function-Overview)
 6. [Version Control](#version-control)
 7. [Testing](#testing)
    - [Browser Compatibility](#browser-compatibility)
@@ -64,6 +65,46 @@ Visit [The Achievo-List 2000](https://christoph1984.github.io/achievo-list-2000/
 ### Wireframes from Lucid
 
 ![Lucid Wireframe Large Screen](assets/images/list_lucid_screenshot.png)
+
+## The Achievo-List 2000 Function Overview
+This section provides a summary of each function used in the Achievo-List 2000 application, outlining their purposes and behaviors.
+
+### `saveTasks`
+- **Purpose**: Saves the current list of tasks to local storage.
+- **Behavior**: Iterates over the tasks in the `task-list` element, extracts their text content, and stores them in local storage as a JSON string.
+
+### `loadTasks`
+- **Purpose**: Loads and displays tasks from local storage when the page is loaded.
+- **Behavior**: Retrieves tasks stored in local storage, creates list items for each task, and appends them to the `task-list` element. Each task item includes a 'Done' button with an event handler to remove the task from the list and update the display and storage.
+
+### `getGreeting`
+- **Purpose**: Generates a greeting message based on the current time.
+- **Behavior**: Determines the time of day and returns an appropriate greeting message ("Good morning", "Good afternoon", or "Good evening").
+
+### `displayGreetingMessage`
+- **Purpose**: Displays a greeting message in a designated container.
+- **Behavior**: Gets a greeting message using `getGreeting` function and displays it in the `greeting-message` element.
+
+### `displayMotivationalMessage`
+- **Purpose**: Displays a random motivational message.
+- **Behavior**: Selects a random message from a predefined array and displays it in the `motivational-message` element.
+
+### `addTask`
+- **Purpose**: Adds a new task to the task list.
+- **Behavior**: Retrieves the entered task from the input field, validates it, creates a new list item with a 'Done' button, and appends it to the `task-list`. Saves the updated list of tasks.
+
+### `checkTasks`
+- **Purpose**: Checks if all tasks are completed and displays a final message.
+- **Behavior**: Checks the length of the `task-list` element and, if empty, displays a completion message in the `motivational-message` element.
+
+### Event Listener: "Tell me how" Button
+- **Purpose**: Toggles the visibility of a text element when the "Tell me how" button is clicked.
+- **Behavior**: Changes the visibility and content of the `displayText` element upon clicking the button.
+
+### Event Listener: Task Input "Enter" Key
+- **Purpose**: Adds a task when the Enter key is pressed in the task input field.
+- **Behavior**: Triggers the `addTask` function when the Enter key is pressed while focusing on the task input field.
+
 
 ## Version Control
 <ul>
