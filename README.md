@@ -2,6 +2,8 @@
 
 Welcome to "The Achievo-List 2000" - a dynamic to-do list application designed to streamline your task management and boost productivity with a user-friendly and motivational interface. Ideal for organizing daily chores, work tasks, and personal goals.
 
+![Achievo-List responsive image](assets/images/list_am_i_responsive.png)
+
 ## Key Features
 
 - **Task Management:** Add, view, and manage your tasks with ease. The intuitive input field and "Add" button make entering tasks effortless.
@@ -74,6 +76,16 @@ iPhone 13 | No issues.| Pass
 Morning | Pass 
 Afternoon | Pass
 Evening | Pass
+
+* W3C HTML validation - PASS
+![W3C HMTL Validation](assets/images/list_html_valid.png)
+
+* W3C CSS validation - PASS
+![W3C CSS Page Validation](assets/images/list_css_valid.png)
+
+* JShint Javascript validation - PASS
+![JShint validation](assets/images/list_jshint_valid.png)
+
 
 * Lighthouse testing (site tested in Lighthouse repeatedly throughout development)
 
