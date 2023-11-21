@@ -17,12 +17,17 @@ function saveTasks() {
 // Function to load tasks from local storage
 function loadTasks() {
     var tasks = JSON.parse(localStorage.getItem("tasks"));
+    var taskList = document.getElementById("task-list"); // Defines taskList in this function
 
     // Create list items for each saved task and append to the task list
     if (tasks) {
         tasks.forEach(function (taskText) {
+            var li = document.createElement("li"); // Defines li here
+            li.innerText = taskText;
 
             // Create a 'Done' button for each task
+            var doneButton = document.createElement("button"); // Define doneButton here
+            doneButton.innerText = "Done";
             doneButton.onclick = function () {
                 taskList.removeChild(li); // Remove task from list
                 displayMotivationalMessage(); // Display a motivational message
